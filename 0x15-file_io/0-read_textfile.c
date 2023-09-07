@@ -11,7 +11,7 @@
  *
  * Return: The actual number of letters read and printed, or 0 on failure.
  */
-ssize_t read_textfile(const char *f, size_t letters)
+ssize_t read_textfile(const char *f, size_t l)
 {
 	int fd;
 	ssize_t num_read, num_written;
@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *f, size_t letters)
 	if (f == NULL)
 		return (0);
 
-	buffer = malloc(sizeof(char) * letters);
+	buffer = malloc(sizeof(char) * l);
 	if (buffer == NULL)
 		return (0);
 
@@ -31,7 +31,7 @@ ssize_t read_textfile(const char *f, size_t letters)
 		return (0);
 	}
 
-	num_read = read(fd, buffer, letters);
+	num_read = read(fd, buffer, l);
 	if (num_read == -1)
 	{
 		free(buffer);
