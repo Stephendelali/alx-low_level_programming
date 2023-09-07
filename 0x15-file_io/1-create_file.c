@@ -6,7 +6,7 @@
 
 /**
  * create_file - Create a file with the given name .
- * @Nmae: The file name .
+ * @Name: The file name .
  * @text_content: The content to writea.
  *
  * Return: 1 on success, -1 on failure.
