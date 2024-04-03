@@ -2,7 +2,7 @@
 "" function of an island perimeter.""
 
 
-def perimeter(grid):
+def island_perimeter(grid):
     """Return the perimiter of an island.
 
     grid is water by 0 and by 1.
